@@ -7,6 +7,8 @@ import {
 } from "@dynamic-labs/sdk-react-core";
 import { getWeb3Provider, getSigner } from "@dynamic-labs/ethers-v6";
 import CreateProfile from "./CreateProfile";
+import CirclesSDK from "./CirclesSDK";
+
 
 const LoginComponent = () => {
   const isLoggedIn = useIsLoggedIn();
@@ -26,7 +28,9 @@ const LoginComponent = () => {
       const web3Signer = await getSigner(primaryWallet);
 
       setProvider(web3Provider);
+      console.log(web3Provider)
       setSigner(web3Signer);
+      console.log(web3Signer)
       console.log("Wallet Address: ", getAddress());
     } catch (error) {
       console.error("Error fetching provider and signer:", error);
@@ -55,6 +59,7 @@ const LoginComponent = () => {
           <CreateProfile provider={provider} signer={signer} />
         )}
       </div>
+      <CirclesSDK provider={provider} signer={signer} />
     </div>
   );
 };
