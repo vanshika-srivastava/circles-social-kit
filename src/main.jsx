@@ -6,6 +6,7 @@ import {
   DynamicContextProvider,
   DynamicWidget,
 } from "@dynamic-labs/sdk-react-core";
+import { EthereumWalletConnectors } from "@dynamic-labs/ethereum";
 
 
 createRoot(document.getElementById('root')).render(
@@ -13,6 +14,8 @@ createRoot(document.getElementById('root')).render(
     <DynamicContextProvider
       settings={{
         environmentId: "be220ab0-8e5c-492b-a15f-00ac415fd622",
+        walletConnectors: [EthereumWalletConnectors],
+        debugError: true,
       }}
     >
       <App />
