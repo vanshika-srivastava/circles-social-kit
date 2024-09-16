@@ -16,7 +16,6 @@ function App() {
             Get your circles avatar setup with a simple login!
           </h1>
         </div>
-
         <LoginComponent />
       </div>
     </div>

@@ -30,7 +30,6 @@ const LoginComponent = () => {
         <DynamicWidget />
         <DynamicUserProfile />
       </div>
-      <p>{getAddress()}</p>
     </div>
   );
 };
